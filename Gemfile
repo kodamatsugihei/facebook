@@ -45,3 +45,4 @@ end
 
 # プロジェクトのため追加
 gem 'twitter-bootstrap-rails'
+gem 'devise'
