@@ -1,11 +1,11 @@
 <h2>コメント編集</h2>
-<%= form_for([topic,comment]) do |f| %>
-  <% if comment.errors.any? %>
+<%= form_for(@comment, :url => topic_comment_path(@comment.topic_id, @comment.id)) do |f| %>
+  <% if @comment.errors.any? %>
     <div id="error_explanation">
-      <h2><%= comment.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @comment.errors.count %>件のエラーがあります。</h2>
 
       <ul>
-      <% comment.errors.full_messages.each do |msg| %>
+      <% @comment.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

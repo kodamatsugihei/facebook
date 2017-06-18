@@ -1,9 +1,18 @@
 Rails.application.routes.draw do
 
+  resources :conversations do
+    resources :messages
+  end
+
+  resources :relationships, only: [:create, :destroy]
+
   devise_for :users, controllers: {
     registrations: "users/registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
   }
+
+  resources :users, only: [:index]
+
   devise_scope :user do
     authenticated :user do
       root :to => 'topics#index', as: :authenticated_root
