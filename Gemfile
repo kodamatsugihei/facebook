@@ -57,7 +57,7 @@ gem 'twitter-bootstrap-rails'
 gem 'devise'
 group :development do
   gem 'letter_opener_web'
-  gem 'dotenv-rails'
+  # gem 'dotenv-rails'
 end
 gem 'omniauth'
 gem 'omniauth-twitter'
@@ -69,3 +69,4 @@ gem 'fog'
 gem 'dotenv-rails'
 gem 'unicorn'
 gem 'rails_12factor', group: :production
+gem 'dotenv-rails'
